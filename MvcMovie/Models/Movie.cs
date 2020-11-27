@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations; // Annotations
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace MvcMovie.Models
 {
@@ -18,6 +19,11 @@ namespace MvcMovie.Models
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
+
+        //Tells to add this but like ?
+        //[Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")]
+        
+        public string Rating { get; set; }
     }
 
     public class MovieDBContext : DbContext
